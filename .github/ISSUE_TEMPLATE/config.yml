@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Ask a quick question
+    url: https://github.com/Skwirrel-B-V
+    about: Use Slack for quick questions. Final decisions must be documented in GitHub issues.
+
+  - name: Security issue
+    url: https://github.com/Skwirrel-B-V
+    about: Do not create public issues for security-sensitive reports. Escalate privately.
