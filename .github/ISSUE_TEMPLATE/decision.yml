@@ -1,0 +1,86 @@
+name: Decision
+description: Record a technical or product decision
+title: "[Decision]: "
+labels: ["type: decision", "needs-decision"]
+body:
+  - type: textarea
+    id: decision_needed
+    attributes:
+      label: Decision needed
+      description: What decision needs to be made?
+      placeholder: "Example: Should we use CSV or XLSX export for the first release?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this decision needed?
+      placeholder: "Explain the background, constraints or reason this is blocking progress."
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: List the realistic options.
+      value: |
+        Option A:
+        - Pros:
+        - Cons:
+
+        Option B:
+        - Pros:
+        - Cons:
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: What do you recommend and why?
+      placeholder: "Example: I recommend Option A because it is faster, lower risk and enough for the MVP."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What happens if we choose this option? What happens if we delay?
+      placeholder: "Describe impact on scope, timeline, cost, risk or users."
+    validations:
+      required: true
+
+  - type: input
+    id: decision_owner
+    attributes:
+      label: Decision owner
+      placeholder: "Example: Jeroen / Lead developer / Product owner"
+    validations:
+      required: true
+
+  - type: input
+    id: needed_by
+    attributes:
+      label: Needed by
+      description: When is this decision needed?
+      placeholder: "Example: 2026-06-28"
+    validations:
+      required: false
+
+  - type: textarea
+    id: final_decision
+    attributes:
+      label: Final decision
+      description: Fill this in once the decision has been made.
+      value: |
+        Decision:
+        Reason:
+        Date:
+        Decided by:
+    validations:
+      required: false
