@@ -1,0 +1,102 @@
+name: Bug Report
+description: Report a bug with impact, severity and reproduction steps
+title: "[Bug]: "
+labels: ["type: bug"]
+body:
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: Describe the actual problem.
+      placeholder: "Example: The user cannot save the form after changing the email address."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+      placeholder: "Example: The form should save successfully and show a confirmation message."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide clear reproduction steps.
+      value: |
+        1. Go to ...
+        2. Click on ...
+        3. Enter ...
+        4. See error ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What is the user or business impact?
+      placeholder: "Example: Admins cannot update user accounts."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How serious is this bug?
+      options:
+        - Blocker - release or production is blocked
+        - Critical - major feature broken or data/security risk
+        - Major - important issue, workaround exists
+        - Minor - small issue
+        - Nitpick - cosmetic or preference
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend
+        - Backend
+        - Mobile
+        - Infrastructure
+        - QA
+        - Product
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Where did this happen?
+      placeholder: "Example: production, staging, Chrome, iOS, Android"
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add screenshots, logs, videos or links if available.
+      placeholder: "Paste links, screenshots, logs or other evidence here."
+    validations:
+      required: false
+
+  - type: textarea
+    id: regression_check
+    attributes:
+      label: Regression check
+      description: What related flows should be checked after fixing this?
+      value: |
+        - [ ] Related existing flow still works
+        - [ ] No console or server log errors
+        - [ ] No existing tests are broken
+    validations:
+      required: false  
