@@ -1,0 +1,105 @@
+name: Feature / Use Case
+description: Create a feature ticket with use case, acceptance criteria and test criteria
+title: "[Feature]: "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should this ticket achieve?
+      placeholder: "Example: Allow admins to block a user account."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this needed?
+      placeholder: "Explain the business or user reason."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      value: |
+        As a ...
+        I want to ...
+        So that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_criteria
+    attributes:
+      label: Test Criteria
+      value: |
+        - [ ] Happy path works
+        - [ ] Acceptance criteria have been tested
+        - [ ] Relevant error scenarios have been tested
+        - [ ] Permissions are tested where relevant
+        - [ ] No regression in existing flow
+        - [ ] No console or server log errors
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - Urgent / production blocking
+        - P1 - High
+        - P2 - Normal
+        - P3 - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend
+        - Backend
+        - Mobile
+        - Infrastructure
+        - QA
+        - Product
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      placeholder: "Example: No changes to billing logic."
+    validations:
+      required: false
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of Done
+      value: |
+        - [ ] Code merged
+        - [ ] PR reviewed
+        - [ ] Test criteria completed
+        - [ ] No blocker / critical bugs open
+        - [ ] Documentation updated where relevant
+    validations:
+      required: true
